@@ -1,0 +1,6 @@
+resource_group_name = "myResourceGroup"
+resource_group_location = "East US"
+vnet_name = "myVNet"
+vnet_address_space = "10.0.2.1/16"
+subnet_name = "mySubnet"
+subnet_address_prefix = "10.0.0.1/24"
