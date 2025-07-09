@@ -1,5 +1,5 @@
 resource "azurerm_network_interface" "nic" {
-    name                = "myNIC"
+    name = var.network_interface_card_name
     location            = azurerm_resource_group.ResourceGroup.location
     resource_group_name = azurerm_resource_group.ResourceGroup.name
     
@@ -12,7 +12,7 @@ resource "azurerm_network_interface" "nic" {
 }
 
 resource "azurerm_linux_virtual_machine" "vm" {
-  name                = "example-vm"
+  name                = var.linux_virtual_machine_name
   resource_group_name = azurerm_resource_group.ResourceGroup.name
   location            = azurerm_resource_group.ResourceGroup.location
   size                = "Standard_B1s"
